@@ -1,0 +1,160 @@
+/* Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  /* Colors */
+
+  --bg-primary: hsl(273, 85%, 13%);
+  --bg-secondary: hsl(274, 100%, 99%);
+  --text-primary: hsl(273, 85%, 13%);
+  --text: hsl(0, 0%, 100%);
+  --accent-primary: hsl(150, 100%, 63%);
+  --accent-secondary: hsl(271, 12%, 34%);
+
+  /* Typography */
+
+  /* Font Family */
+
+  --ff-heading: "Fraunces", serif;
+  --ff-body: "Manrope", sans-serif;
+
+  /* Font Size  */
+  --fs-heading-l: 8rem;
+  --fls-heading-l: 8rem;
+  --fs-heading-m: 5.6rem;
+  --fls-heading-m: 6.4rem;
+  --fs-heading-s: 3.2rem;
+  --fls-heading-s: 4rem;
+  --fs-text: 1.8rem;
+  --fls-text: 3.2rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-text);
+  line-height: var(--fls-text);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--space {
+  justify-content: space-between;
+}
+
+.flex--props {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.container {
+  max-width: 111.4rem;
+  margin: 0 auto;
+}
+.header {
+  background-color: var(--bg-primary);
+  padding-top: 5.8rem;
+}
+
+.section-hero {
+  background-color: var(--bg-primary);
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 2px solid var(--accent-primary);
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  color: var(--accent-primary);
+}
+
+.heading-primary {
+  color: var(--text);
+  text-align: center;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading-l);
+  padding-top: 6.4rem;
+  padding-bottom: 3.7rem;
+  line-height: var(--fls-heading-l);
+}
+
+.heading-primary > span {
+  display: block;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+  display: inline-block;
+  color: var(--bg-primary);
+  background-color: var(--accent-primary);
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  color: var(--accent-primary);
+  background-color: var(--bg-primary);
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 2px var(--accent-primary);
+}
+
+.hero-img {
+  max-inline-size: 100%;
+  block-size: auto;
+  /* object-fit: cover; */
+}
