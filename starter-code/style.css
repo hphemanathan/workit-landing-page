@@ -87,23 +87,23 @@ body {
 }
 
 .flex--props {
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4rem;
+}
+
+.flex--direction {
+  flex-direction: column;
 }
 
 .container {
   max-width: 111.4rem;
   margin: 0 auto;
 }
+
 .header {
   background-color: var(--bg-primary);
   padding-top: 5.8rem;
-}
-
-.section-hero {
-  background-color: var(--bg-primary);
 }
 
 .btn-secondary:link,
@@ -153,8 +153,23 @@ body {
   box-shadow: inset 0 0 0 2px var(--accent-primary);
 }
 
+.section-hero {
+  background-color: var(--bg-primary);
+}
+
 .hero-img {
   max-inline-size: 100%;
   block-size: auto;
-  /* object-fit: cover; */
+}
+
+.section-features {
+  padding-top: 5rem;
+  padding-bottom: 17rem;
+}
+
+.feature-list-number {
+}
+
+.test {
+  display: inline-block;
 }
