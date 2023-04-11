@@ -170,6 +170,9 @@ body {
 .feature-list-number {
 }
 
-.test {
-  display: inline-block;
+.feature-list {
+  text-align: center;
+
+  column-gap: 4rem;
+  row-gap: 1rem;
 }
