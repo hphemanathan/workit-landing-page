@@ -90,12 +90,39 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  text-align: center;
 }
 
 .flex--direction {
   flex-direction: column;
 }
 
+.flex--align {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--gap {
+  gap: 3rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--align {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.grid--gap {
+  gap: 4rem;
+}
 .container {
   max-width: 111.4rem;
   margin: 0 auto;
@@ -154,25 +181,85 @@ body {
 }
 
 .section-hero {
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: var(--bg-secondary);
+  padding-bottom: 30rem;
+  position: relative;
+}
+
+.section-hero:before {
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  transform: scaleX(2.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
   background-color: var(--bg-primary);
+  z-index: -1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-img {
   max-inline-size: 100%;
   block-size: auto;
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, 10%);
+}
+
+.bg-pattern-1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
 }
 
 .section-features {
-  padding-top: 5rem;
+  padding-top: 40rem;
   padding-bottom: 17rem;
+  z-index: -1;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-features:before {
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  transform: scaleX(3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: var(--bg-secondary);
+  z-index: -1;
 }
 
 .feature-list-number {
+  border: 1px solid var(--bg-primary);
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  font-family: var(--ff-heading);
+  font-size: 2.4rem;
 }
 
 .feature-list {
   text-align: center;
-
+  /* justify-content: center; */
+  /* align-items: center; */
   column-gap: 4rem;
   row-gap: 1rem;
+}
+
+.feature-list-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading-s);
+}
+
+.feature-list-text {
+  color: var(--bg-primary);
 }
